@@ -1,11 +1,10 @@
 // src/app/signup/page.tsx
 'use client';
 
-// Corrected import statement:
-import { useState } from 'react'; // This line was "import { useState } => {"
+// CORRECTED IMPORT STATEMENT:
+import { useState } from 'react'; // <--- THIS LINE IS CRUCIAL. No '=>' here.
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/app/layout';
- 
 
 const SignupPage = () => {
   const [username, setUsername] = useState('');

@@ -51,14 +51,6 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-// **ENSURE THIS ENTIRE METADATA BLOCK IS GONE**
-/*
-export const metadata = {
-  title: 'My Career Blog',
-  description: 'Explore insightful blogs on Cloud, DevOps, AI/ML, and Software Development.',
-};
-*/
-
 export default function RootLayout({
   children,
 }: Readonly<{
