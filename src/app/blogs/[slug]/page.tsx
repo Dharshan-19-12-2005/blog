@@ -5,12 +5,11 @@ import { blogPosts, BlogPost } from '@/data/blogPosts'; // Updated import path f
 import { notFound } from 'next/navigation';
 
 interface BlogPostPageProps {
-  params: { slug: string };
+  params: { slug: string }
 }
 
-const BlogPostPage: React.FC<BlogPostPageProps> = ({ params }) => {
-  const { slug } = params; // This is the line that might trigger the "params is a Promise" warning
-
+export default function Page({ params }: BlogPostPageProps) {
+  const { slug } = params;
   const blog = blogPosts.find((post) => post.slug === slug);
 
   if (!blog) {
@@ -39,7 +38,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ params }) => {
       </section>
     </div>
   );
-};
+}
 
 // ... (rest of the styles are the same as before)
 const containerStyle: React.CSSProperties = {
@@ -102,5 +101,3 @@ const roadmapListItemStyle: React.CSSProperties = {
   borderRadius: '8px',
   border: '1px solid #e9ecef',
 };
-
-export default BlogPostPage;
